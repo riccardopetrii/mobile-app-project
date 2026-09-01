@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- La schermata di avvio delle versioni di Android precedenti alla 12: il
+     teal delle intestazioni con la scritta VIVO al centro, come in cima alla
+     schermata di accesso. Dalla 12 in poi la disegna il sistema, e le
+     istruzioni stanno in values-v31/styles.xml. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/vivo_teal" />
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/vivo_marchio" />
+    </item>
+</layer-list>

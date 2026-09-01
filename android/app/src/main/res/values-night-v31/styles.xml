@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copia di values-v31 per la modalita' scura del telefono. Serve davvero:
+     fra i qualificatori delle risorse la modalita' notte conta piu' della
+     versione di Android, quindi con lo schermo scuro un Android 12 sceglierebbe
+     values-night/styles.xml e la schermata di avvio di sistema resterebbe nera.
+     VIVO ha un solo avvio, teal, con qualunque impostazione del telefono. -->
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowSplashScreenBackground">@color/vivo_teal</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/vivo_marchio</item>
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@color/vivo_teal</item>
+    </style>
+</resources>

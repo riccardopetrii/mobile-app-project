@@ -1,0 +1,88 @@
+\documentclass[11pt, a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{cmap}
+\usepackage[italian]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+\graphicspath{{./}{../}}
+\hypersetup{
+    hidelinks,
+    pdftitle={Vivo - Progetto di Applicazioni Mobili},
+    pdfauthor={Riccardo Petri},
+    pdfsubject={Relazione di progetto}
+}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+
+    \begin{titlepage}
+        \centering
+        \vspace*{0.5cm}
+
+        \includegraphics[width=0.35\textwidth]{assets/uniud_logo.pdf}\\[1cm]
+
+        {\LARGE \textsc{Università degli Studi di Udine}}\\[0.3cm]
+        {\large Dipartimento di Scienze Matematiche, Informatiche e Fisiche}\\[1.5cm]
+
+        \rule{\linewidth}{0.4mm} \\[0.8cm]
+        {\Huge \textbf{Progetto di Applicazioni Mobili}}\\[0.5cm]
+        {\LARGE Vivo}\\[0.8cm]
+        \rule{\linewidth}{0.4mm} \\[2cm]
+
+        \begin{minipage}[t]{0.45\textwidth}
+            \begin{flushleft} \large
+                \emph{Docente:}\\[0.2cm]
+                \textbf{Prof. Stefano Burigat}
+            \end{flushleft}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.5\textwidth}
+            \begin{flushright} \large
+                \emph{Autore:}\\[0.2cm]
+                \textbf{Riccardo Petri}\\ \href{mailto:167623@spes.uniud.it}{\normalsize 167623@spes.uniud.it}\\[0.2cm]
+            \end{flushright}
+        \end{minipage}
+
+        \vfill
+
+        {\large \textbf{Anno Accademico 2025--2026}}
+        \vspace*{0.5cm}
+    \end{titlepage}
+
+    \tableofcontents
+    \newpage
+
+    \chapter{Introduzione}
+    \input{chapters/0_introduzione}
+
+    \chapter{Definizione della vision e dei requisiti}
+    \input{chapters/1_envision}
+
+    \chapter{Prototipazione a bassa fedeltà}
+    \input{chapters/2_sketching}
+
+    \chapter{Wireframe}
+    \label{ch:wireframe}
+    \input{chapters/3_wireframing}
+
+    \chapter{Valutazione con utenti}
+    \input{chapters/4_valutazione}
+
+    \chapter{Implementazione}
+    \input{chapters/5_implementazione}
+
+    \chapter{Conclusioni}
+    \input{chapters/6_conclusioni}
+\end{document}

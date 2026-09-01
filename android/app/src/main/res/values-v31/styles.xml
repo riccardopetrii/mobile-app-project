@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Da Android 12 la schermata di avvio la disegna il sistema: non guarda piu'
+     windowBackground, ma il fondo e l'icona dichiarati qui sotto. L'icona
+     viene ritagliata in un cerchio, e la scritta di @drawable/vivo_marchio e'
+     stata disegnata per starci dentro. -->
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowSplashScreenBackground">@color/vivo_teal</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/vivo_marchio</item>
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Il tema che resta dietro Flutter mentre si inizializza: teal come
+         l'avvio, altrimenti il bianco che stiamo togliendo ricompare qui. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@color/vivo_teal</item>
+    </style>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- I colori della schermata di avvio, gli stessi che stanno in
+     lib/ui/core/themes/colors.dart: il teal delle intestazioni e la crema
+     di fondo delle schermate. Vanno tenuti allineati a mano, perche' un
+     file di risorse Android non puo' leggere il tema di Flutter. -->
+<resources>
+    <color name="vivo_teal">#FF174A46</color>
+    <color name="vivo_crema">#FFEFEAE1</color>
+</resources>

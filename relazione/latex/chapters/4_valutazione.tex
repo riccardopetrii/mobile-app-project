@@ -1,0 +1,176 @@
+I wireframe descritti nel capitolo precedente sono stati sottoposti a una valutazione con utenti reali, condotta con l'obiettivo di verificare la tenuta delle scelte già consolidate e di sciogliere i due confronti progettuali che la fase di prototipazione aveva deliberatamente lasciato aperti.
+La valutazione non ha avuto carattere autonomo.
+In tutte le sessioni il valutatore è rimasto presente per assegnare i task, osservare direttamente l'esecuzione e raccogliere le verbalizzazioni dei partecipanti, senza però intervenire con suggerimenti se non in caso di blocco completo.
+
+\section{Partecipanti e modalità di conduzione}
+\label{sec:partecipanti}
+
+Il campione è composto da cinque persone.
+Il numero non è casuale, poiché nella pratica della valutazione di usabilità cinque partecipanti costituiscono la soglia oltre la quale i nuovi soggetti tendono a segnalare problemi già emersi, e l'obiettivo dell'indagine non era misurare tempi con validità statistica ma individuare i punti in cui l'interfaccia si comporta diversamente da come l'utente si aspetta.
+I partecipanti sono stati scelti in modo da coprire entrambi i profili descritti dalle personas, ovvero chi incontrerebbe l'applicazione nel momento della crisi e chi la utilizzerebbe come strumento di osservazione nel tempo.
+
+\begin{table}[htbp]
+    \centering
+    \small
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{L{1.6cm} X}
+        \toprule
+        \textbf{Utente} & \textbf{Profilo} \\
+        \midrule
+        U1 & 21 anni, studentessa universitaria fuorisede. Riferisce episodi di ansia concentrati nei periodi d'esame e non ha mai utilizzato applicazioni dedicate al benessere mentale \\
+        U2 & 24 anni, studente di Informatica. Elevata competenza digitale e nessuna esperienza pregressa del dominio, profilo utile a verificare la sola chiarezza dell'interfaccia \\
+        U3 & 27 anni, lavoratrice dipendente. Utilizza abitualmente applicazioni di meditazione e mindfulness, e conosce quindi le convenzioni consolidate del settore \\
+        U4 & 35 anni, impiegato. Segue un percorso psicoterapeutico e utilizza lo smartphone per poche applicazioni, sempre le stesse \\
+        U5 & 19 anni, matricola universitaria. Uso intensivo dello smartphone e nessuna abitudine di tracciamento del proprio stato emotivo \\
+        \bottomrule
+    \end{tabularx}
+    \caption{I cinque partecipanti alla valutazione}
+    \label{tab:partecipanti}
+\end{table}
+
+La valutazione ha assunto la forma di sessioni moderate sui wireframe interattivi, tre in presenza con U1, U3 e U4 e due a distanza in videochiamata con condivisione dello schermo per U2 e U5.
+Ogni incontro è durato fra i venti e i trenta minuti.
+Ai partecipanti è stato chiesto di applicare il protocollo del pensiero ad alta voce, verbalizzando dubbi, aspettative e ragioni di ogni scelta, così da raccogliere indicazioni sul carico cognitivo mentre questo si manifestava e non a posteriori.
+I task sono stati enunciati in termini di obiettivo e mai di procedura, poiché descrivere i passaggi da compiere avrebbe verificato soltanto la capacità dei partecipanti di eseguire istruzioni.
+
+Un limite della valutazione va dichiarato apertamente.
+Nessuna sessione ha potuto riprodurre la condizione di un attacco di panico reale, che è precisamente il contesto d'uso per cui l'applicazione è progettata.
+Ai partecipanti è stato chiesto di immedesimarsi in quella situazione, ma le prestazioni osservate vanno lette come un limite superiore, poiché una persona in stato di forte agitazione dispone di risorse attentive nettamente inferiori.
+Per questa ragione, nell'interpretazione dei risultati, ogni esitazione osservata in condizioni di calma è stata considerata un problema serio e non una difficoltà trascurabile.
+
+\section{Setup del test e definizione dei task}
+\label{sec:setup-task}
+
+Ai partecipanti sono stati assegnati sei task, costruiti per attraversare l'intera architettura dell'applicazione, dal primo accesso alla consultazione dello storico.
+Per i due punti su cui la fase di wireframing aveva prodotto soluzioni concorrenti, il task è stato somministrato in entrambe le varianti, alternando l'ordine di presentazione fra un partecipante e il successivo per evitare che il vantaggio di aver già compreso il compito ricadesse sempre sulla stessa versione.
+Al termine di ogni esecuzione è stata raccolta una valutazione di usabilità percepita su scala Likert a sette punti, dove 1 indica \enquote{molto difficile} e 7 \enquote{molto facile}.
+
+\begin{enumerate}
+    \item \textbf{Task 1, primo accesso.} \enquote{Apri l'applicazione e raggiungi gli strumenti senza creare un account.} La prova verifica la riconoscibilità del comando che consente di proseguire come ospite, che è il presidio principale del requisito di accesso senza barriere (\textbf{REQ-04}).
+    \item \textbf{Task 2, richiesta di aiuto.} \enquote{Stai avendo un attacco di panico, chiedi aiuto all'applicazione e completa il primo esercizio proposto.} La prova osserva la schermata di transizione, la comprensione dell'indicatore circolare della respirazione guidata e l'individuazione del comando che consente di saltare le pause di mantenimento.
+    \item \textbf{Task 3, uscita dal percorso.} \enquote{Interrompi la sessione in corso e torna alla schermata iniziale.} La prova verifica la reversibilità della navigazione e la chiarezza con cui il sistema dichiara le conseguenze dell'abbandono (\textbf{REQ-03}).
+    \item \textbf{Task 4, questionario di chiusura.} \enquote{Registra com'è andata e che cosa l'ha scatenata.} La prova osserva la comprensione della scala di intensità, l'uso delle etichette dei fattori scatenanti e il ricorso all'etichetta generica quando nessuna delle altre risulta pertinente (\textbf{REQ-06}).
+    \item \textbf{Task 5, consultazione del diario.} \enquote{Guarda quante richieste di aiuto hai fatto ieri e con quale intensità.} La prova mette a confronto la card in forma di tabella, che espone i valori in forma numerica e riporta il fattore scatenante, con quella che affida l'intensità a un indicatore a riempimento proporzionale e sposta il fattore scatenante nella vista di dettaglio (\textbf{REQ-07}).
+    \item \textbf{Task 6, dettaglio di una richiesta.} \enquote{Apri l'episodio delle 10:15 e dimmi che cosa lo aveva provocato.} La prova mette a confronto la soluzione basata su componenti modali numerati impilati in sovrimpressione con quella che raccoglie tutti gli episodi della giornata in un riquadro unico, ripresa dal pattern già impiegato per la riflessione personale.
+\end{enumerate}
+
+Come prova secondaria, al termine della sessione è stato chiesto di attivare il promemoria quotidiano e di fissarne l'orario dalla schermata del profilo (\textbf{REQ-12}).
+
+\section{Risultati e discussione}
+\label{sec:risultati}
+
+I punteggi raccolti sono riportati nella tabella seguente, dove le sigle A e B distinguono le due varianti sottoposte a confronto.
+
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{lcccccc}
+        \toprule
+        \textbf{Task} & \textbf{U1} & \textbf{U2} & \textbf{U3} & \textbf{U4} & \textbf{U5} & \textbf{Media} \\
+        \midrule
+        T1: Primo accesso & 7 & 7 & 6 & 5 & 7 & \textbf{6.4} \\
+        T2: Richiesta di aiuto & 7 & 6 & 7 & 6 & 7 & \textbf{6.6} \\
+        T3: Uscita dal percorso & 4 & 5 & 4 & 3 & 4 & \textbf{4.0} \\
+        T4: Questionario di chiusura & 7 & 7 & 7 & 5 & 6 & \textbf{6.4} \\
+        T5A: Diario, card tabulare & 4 & 5 & 4 & 3 & 4 & \textbf{4.0} \\
+        T5B: Diario, indicatore proporzionale & 7 & 6 & 7 & 6 & 7 & \textbf{6.6} \\
+        T6A: Dettaglio, modali numerati & 3 & 4 & 4 & 3 & 4 & \textbf{3.6} \\
+        T6B: Dettaglio, riquadro unico & 7 & 7 & 7 & 6 & 7 & \textbf{6.8} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Usabilità percepita su scala Likert a sette punti}
+    \label{tab:punteggi}
+\end{table}
+
+Il quadro per singolo partecipante è riassunto nella tabella seguente, che riporta per ciascuno l'esito complessivo e l'osservazione più significativa emersa durante la sessione.
+
+\begin{table}[htbp]
+    \centering
+    \small
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{L{1.6cm} L{3.1cm} X}
+        \toprule
+        \textbf{Utente} & \textbf{Esito dei task} & \textbf{Osservazione principale} \\
+        \midrule
+        U1 & Tutti completati, T3 con errore & Ha individuato immediatamente l'accesso come ospite e ha commentato che le sarebbe bastato a non disinstallare l'applicazione. Nel task di uscita ha però premuto la barra di navigazione, perdendo l'esercizio in corso \\
+        U2 & Tutti completati & È rimasto in attesa davanti alla schermata di transizione, ritenendola un caricamento. Di fronte ai modali numerati ha dichiarato di non capire se stesse guardando una cosa sola divisa in parti oppure più cose distinte \\
+        U3 & Tutti completati, T3 con errore & Ha ricondotto l'indicatore della respirazione agli esercizi che già conosce. Ha osservato che la card del diario con indicatore proporzionale si legge come una sequenza e non come una tabella \\
+        U4 & Tutti completati, T3 con errore & Ha esaminato a lungo i campi di accesso prima di accorgersi del comando ospite. Ha confuso il numero progressivo dell'episodio con l'intensità e, uscito dal percorso dalla barra, si aspettava che i progressi fossero conservati \\
+        U5 & Tutti completati & Ha chiesto se la compilazione del questionario fosse obbligatoria. Per il promemoria ha cercato la scelta dell'orario fra le impostazioni di sistema del telefono prima di trovarla nell'applicazione \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Esito delle sessioni per singolo partecipante}
+    \label{tab:esiti}
+\end{table}
+
+Raggruppando le osservazioni si ottengono i problemi ricorrenti, ordinati per numero di partecipanti che li hanno incontrati.
+
+\begin{table}[htbp]
+    \centering
+    \small
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X L{2.9cm} L{1.4cm}}
+        \toprule
+        \textbf{Problema rilevato} & \textbf{Utenti} & \textbf{Task} \\
+        \midrule
+        L'intensità della crisi non si legge a colpo d'occhio nella card in forma di tabella & U1, U3, U4, U5 & T5A \\
+        I modali numerati non chiariscono se gli episodi appartengano allo stesso giorno né che cosa comporti chiuderne uno & U1, U2, U4, U5 & T6A \\
+        La barra di navigazione viene usata come uscita, con perdita dell'esercizio in corso & U1, U3, U4 & T3 \\
+        Il comando che salta le pause di mantenimento non viene individuato & U2, U4, U5 & T2 \\
+        Il comando di accesso come ospite viene notato con qualche secondo di ritardo & U4, U5 & T1 \\
+        La schermata di transizione viene scambiata per un caricamento & U2 & T2 \\
+        La natura facoltativa del questionario non è dichiarata a schermo & U5 & T4 \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Problemi ricorrenti emersi dalla valutazione}
+    \label{tab:problemi}
+\end{table}
+
+Il primo accesso non ha prodotto blocchi e tutti hanno raggiunto gli strumenti senza creare un account, ma il ritardo con cui i due partecipanti meno esperti hanno individuato il comando riservato agli ospiti dice qualcosa di preciso.
+Chi arriva davanti a un modulo di credenziali si aspetta di doversi registrare, e un'alternativa collocata a margine non basta a smentire quell'aspettativa.
+Il requisito di accesso senza barriere (\textbf{REQ-04}) non è quindi soddisfatto dalla sola presenza del comando, ma dal peso visivo che gli viene assegnato.
+
+La richiesta di aiuto ha avuto il riscontro più uniforme dell'intera sessione.
+L'indicatore circolare della respirazione non ha richiesto spiegazioni a nessuno, il che conferma la scelta di affidare la guida a una forma in movimento anziché a un testo da leggere (\textbf{REQ-01}).
+Il dato negativo riguarda il comando che consente di saltare le pause di mantenimento, sfuggito a tre partecipanti su cinque, che lo hanno individuato soltanto quando è stato chiesto loro di cercarlo.
+È la funzione pensata per chi durante l'attacco non riesce a trattenere il respiro, e la sua scarsa evidenza la rende invisibile proprio a chi ne avrebbe più bisogno.
+
+L'uscita dal percorso di aiuto ha prodotto il punteggio più basso fra i task non sottoposti a confronto e il rilievo più importante dell'intera valutazione.
+Alla richiesta di interrompere la sessione, tre partecipanti su cinque hanno indicato una scheda della barra di navigazione inferiore anziché il comando di uscita collocato nell'intestazione, abbandonando l'esercizio senza rendersi conto che i progressi non sarebbero stati conservati.
+La barra era stata mantenuta nei wireframe per uniformità con il resto dell'applicazione, ma il test ha mostrato che in questo contesto offre una via d'uscita involontaria, e che una via d'uscita involontaria contraddice il requisito di reversibilità invece di soddisfarlo.
+Il requisito chiede infatti che l'utente possa uscire in qualsiasi momento conoscendo le conseguenze della propria scelta, non che esca senza essersene accorto.
+
+Il questionario di chiusura è stato completato da tutti.
+Le etichette dei fattori scatenanti sono state riconosciute come risposte già pronte da premere, e quella generica è stata scelta da due partecipanti che non hanno trovato la propria situazione fra le altre, il che conferma l'utilità di una risposta di ripiego che non obblighi a formulare una descrizione (\textbf{REQ-06}).
+La domanda conclusiva sullo stato della persona, con la possibilità di avviare subito un'altra sessione, è stata indicata come il dettaglio più utile dell'intero flusso.
+
+Il confronto sulla consultazione del diario si è chiuso con una differenza di oltre due punti e mezzo fra le due varianti.
+Con la card in forma di tabella i partecipanti hanno dovuto leggere e interpretare i valori uno per uno, e il fattore scatenante esposto nella vista compatta è stato percepito come un'informazione in più da scartare, non come un aiuto.
+Con l'indicatore proporzionale la risposta è arrivata a colpo d'occhio, poiché la lunghezza del riempimento comunicava già l'andamento della giornata, ed è precisamente l'effetto ricercato in una schermata destinata a essere consultata anche dopo una giornata difficile.
+
+Il confronto sulla vista di dettaglio ha prodotto lo scarto più ampio della valutazione.
+I componenti modali numerati hanno disorientato quattro partecipanti su cinque, che non sono riusciti a stabilire se gli elementi appartenessero tutti allo stesso episodio né che cosa comportasse chiuderne uno.
+La versione a riquadro unico non ha invece richiesto alcuna spiegazione, e due partecipanti vi hanno riconosciuto l'impostazione già incontrata nella riflessione personale, a conferma del fatto che la coerenza interna fra schermate produce un vantaggio misurabile e non soltanto formale.
+
+La prova secondaria sul promemoria quotidiano non ha evidenziato difficoltà: tutti i partecipanti hanno individuato l'interruttore nella card delle impostazioni del profilo.
+
+\section{Conseguenze sul design}
+\label{sec:conseguenze-design}
+
+La valutazione ha confermato la struttura generale dell'applicazione e ha prodotto quattro interventi puntuali, elencati di seguito in ordine di rilevanza.
+
+Il primo riguarda la barra di navigazione, che è stata rimossa dall'intero flusso di aiuto.
+Durante una sessione l'unico comando di uscita resta quello esplicito collocato nell'intestazione, al quale è stata associata una richiesta di conferma che dichiara la perdita dei progressi prima che questa avvenga.
+L'intervento non riduce la libertà dell'utente, poiché l'uscita rimane disponibile in ogni momento, ma la rende una scelta consapevole anziché un tocco accidentale (\textbf{REQ-03}).
+
+Il secondo e il terzo intervento sciolgono i due confronti progettuali.
+Per la pagina del diario è stata adottata la card con indicatore a riempimento proporzionale, con il fattore scatenante spostato nella vista di dettaglio, e per il dettaglio delle richieste è stata adottata la vista a riquadro unico, coerente con il pattern della riflessione personale.
+In entrambi i casi la decisione non deriva da una preferenza del progettista ma dal divario emerso nei punteggi e nelle verbalizzazioni.
+
+Il quarto riguarda il comando che consente di saltare le pause di mantenimento durante la respirazione guidata, sfuggito a tre partecipanti su cinque.
+Nell'applicazione resta sempre visibile ed è accompagnato da una riga che dichiara in quali fasi si attiva, cosicché chi lo cerca lo trovi e chi lo preme fuori tempo capisca perché non risponde.
+
+Restano infine registrate due osservazioni che non hanno prodotto una modifica immediata dei wireframe.
+La prima riguarda il comando di accesso come ospite, la cui individuazione ha richiesto qualche secondo agli utenti meno esperti: in una schermata che deve poter essere attraversata durante una crisi quei secondi hanno un peso, ma la schermata di accesso è rimasta quella valutata e il rilievo resta aperto.
+La seconda riguarda il questionario di chiusura, la cui natura facoltativa non è dichiarata a schermo.
+Chi lo compila può quindi chiedersi se sia obbligatorio, anche se il comando di uscita collocato nell'intestazione resta disponibile e permette di abbandonarlo in qualsiasi momento.
