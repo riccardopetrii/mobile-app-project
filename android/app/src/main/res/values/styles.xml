@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- La finestra che il telefono mostra mentre il processo parte, prima che
+         Flutter disegni il primo fotogramma: il teal con la scritta VIVO.
+         Dalla 12 in poi la schermata di avvio la disegna il sistema, e le
+         istruzioni stanno in values-v31/styles.xml. -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Il tema che vale appena il processo e' partito, e che resta dietro
+         l'interfaccia di Flutter mentre si inizializza. Teal come l'avvio:
+         lasciandolo al fondo predefinito, il bianco tolto sopra ricomparirebbe
+         qui, e il lampo si sposterebbe invece di sparire. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@color/vivo_teal</item>
+    </style>
+</resources>

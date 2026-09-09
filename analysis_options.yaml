@@ -1,0 +1,23 @@
+# Configurazione dell'analizzatore statico di Dart.
+# Eseguire `flutter analyze` per il controllo da riga di comando.
+
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    # Un widget o un metodo senza documentazione non blocca il lavoro,
+    # ma il codice morto e i tipi mancanti sì.
+    dead_code: error
+    unused_import: error
+    unused_local_variable: error
+
+linter:
+  rules:
+    prefer_single_quotes: true
+    always_declare_return_types: true
+    prefer_final_locals: true
+    unawaited_futures: true
+    require_trailing_commas: true
+    avoid_print: true
+    sort_child_properties_last: true
+    use_super_parameters: true

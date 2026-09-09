@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- L'icona dell'applicazione, dalla 26 di Android in poi: il teal come strato
+     di fondo e la scritta VIVO come strato davanti, cosi' il lanciatore la
+     ritaglia con la forma che preferisce senza tagliare le lettere. Lo strato
+     monocromatico serve alle icone a tema della 13 e successive: il sistema
+     usa solo la sua trasparenza e ci mette i colori scelti dall'utente. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/vivo_teal" />
+    <foreground android:drawable="@drawable/ic_launcher_marchio" />
+    <monochrome android:drawable="@drawable/ic_launcher_marchio" />
+</adaptive-icon>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gli stessi temi di values/styles.xml per quando la modalita' scura del
+     telefono e' accesa. VIVO ha un solo avvio, teal, con qualunque
+     impostazione: senza questo file lo schermo scuro mostrerebbe il nero di
+     Theme.Black al posto della scritta. -->
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/vivo_teal</item>
+    </style>
+</resources>

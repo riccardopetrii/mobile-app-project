@@ -1,0 +1,53 @@
+Il percorso descritto in questo documento ha condotto Vivo dall'idea iniziale a un'applicazione installabile, attraversando nell'ordine la definizione della vision, l'analisi dei competitor, la stesura dei requisiti, l'esplorazione con gli sketch, la modellazione dei wireframe, la valutazione con gli utenti e infine lo sviluppo.
+Ogni fase ha vincolato quella successiva, e nessuna delle scelte finali è priva di una motivazione rintracciabile in un punto preciso del processo.
+
+L'analisi dei competitor ha individuato una lacuna precisa, ovvero che le applicazioni esaminate rispondono alla crisi con contenuti da leggere o da ascoltare anziché con qualcosa da fare, e che l'accesso agli strumenti è ostacolato da procedure di registrazione e da paywall collocati esattamente nel punto in cui l'utente ha bisogno di aiuto.
+I requisiti sono stati scritti a partire da questa constatazione, e la tabella seguente riepiloga il modo in cui ciascuno di essi è stato soddisfatto nell'applicazione realizzata.
+
+\begin{table}[htbp]
+    \centering
+    \small
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{L{2.1cm} X}
+        \toprule
+        \textbf{Requisito} & \textbf{Realizzazione} \\
+        \midrule
+        REQ-01 & Interfaccia a card su fondo chiaro, pulsante di aiuto in rosa anziché in rosso, nessun contenuto estraneo nella schermata principale \\
+        REQ-02 & Tre esercizi interattivi nel percorso di soccorso, ovvero respirazione 4-4-4-4, attività delle stelle e grounding 5-4-3-2-1 \\
+        REQ-03 & Comando di uscita esplicito in ogni schermata del percorso, con dichiarazione delle conseguenze, e barra di navigazione rimossa dal flusso dopo la valutazione \\
+        REQ-04 & Accesso come ospite in evidenza nella schermata iniziale, nessuna configurazione preliminare e nessun pagamento \\
+        REQ-05 & Database SQLite nella cartella privata dell'applicazione, password conservata come impronta con sale, eliminazione dell'account dal profilo \\
+        REQ-06 & Registrazione dell'umore nella schermata principale e questionario di chiusura con intensità e fattore scatenante \\
+        REQ-07 & Diario con calendario mensile, giorni contrassegnati e vista di dettaglio delle richieste \\
+        REQ-08 & Respirazione e grounding avviabili singolarmente dalle attività consigliate \\
+        REQ-09 & Card dei progressi con confronto fra la settimana corrente e la precedente e variazione percentuale \\
+        REQ-10 & Riflessione libera legata alla giornata, riapribile e modificabile in un momento successivo \\
+        REQ-11 & Profilo con dati anagrafici e immagine, modificabili in qualsiasi momento, con cambio della password e disconnessione \\
+        REQ-12 & Promemoria quotidiano a un orario scelto dall'utente, disattivabile dal profilo \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Come ciascun requisito è stato soddisfatto nell'applicazione realizzata}
+    \label{tab:requisiti}
+\end{table}
+
+Il contributo più istruttivo è venuto dalla valutazione con gli utenti, e non perché abbia smentito l'impostazione generale, che anzi ha retto.
+Il rilievo sulla barra di navigazione ha mostrato che un elemento corretto in astratto, mantenuto per uniformità con il resto dell'applicazione, può diventare dannoso in un contesto specifico, e che la reversibilità richiesta dal requisito non consiste nel moltiplicare le uscite ma nel renderne consapevole chi le imbocca.
+Allo stesso modo, il confronto sulla card del diario ha mostrato che un'informazione in più, il fattore scatenante esposto nella vista compatta, peggiora la lettura anziché arricchirla quando occupa lo spazio destinato a un'occhiata rapida.
+
+Resta il limite dichiarato nel capitolo della valutazione.
+Nessuna prova ha potuto svolgersi durante un attacco di panico reale, che è il contesto per cui l'applicazione è stata progettata, e le osservazioni raccolte a mente lucida vanno lette come una condizione più favorevole di quella d'uso.
+
+\section{Sviluppi futuri}
+\label{sec:sviluppi-futuri}
+
+Il primo sviluppo riguarda l'accessibilità, sulla quale l'applicazione lascia scoperti due interventi, ovvero le etichette semantiche destinate ai lettori di schermo e l'adattamento ai corpi di testo maggiori, dal momento che Vivo impiega una scala tipografica propria e ignora la dimensione del carattere scelta nel telefono.
+È una scelta che protegge i layout ma esclude chi quella dimensione l'ha aumentata per necessità, ed è l'intervento con l'impatto più ampio fra quelli elencati qui.
+
+Il secondo riguarda la restituzione dei dati raccolti.
+Il diario conserva già intensità e fattori scatenanti di ogni episodio, ma l'applicazione non ne ricava ancora una lettura d'insieme.
+Mostrare quali fattori ricorrono con maggiore frequenza, o in quali fasce orarie si concentrano le richieste, trasformerebbe un archivio in uno strumento di consapevolezza, che è l'obiettivo dichiarato del tracciamento.
+
+Il terzo nasce dal profilo del secondo utente descritto fra le personas, ovvero chi segue un percorso psicoterapeutico.
+Una funzione di esportazione del periodo selezionato, in un formato leggibile e prodotta su richiesta esplicita, permetterebbe di portare in seduta ciò che è stato annotato, senza per questo contraddire il principio di conservazione locale, poiché il file resterebbe nelle mani dell'utente.
+
+Restano infine tre estensioni di minore portata ma di sicura utilità, ovvero una scorciatoia raggiungibile dalla schermata di blocco per avviare il percorso di aiuto senza aprire l'applicazione, un salvataggio di riserva cifrato e protetto da password per non perdere il diario cambiando telefono, e la disponibilità di contenuti audio per chi preferisce essere guidato dalla voce anziché dal testo, esclusa in questa versione perché richiederebbe una voce registrata e non sarebbe utilizzabile in luogo pubblico senza cuffie.
